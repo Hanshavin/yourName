@@ -1,0 +1,76 @@
+back-color = #1D1F20
+color1 = #011F3F
+color2 = #429FFD
+color3 = #0960BD
+color4 = #0960BD
+color5 = #FEF2BF
+
+l = 450
+r = 278 // (450/1.6180) proporción áurea
+
+*
+  box-sizing border-box
+body
+  margin 20px
+  background back-color
+
+.wrapper
+  border-top:    (r)px     solid color1;
+  border-bottom: (l - r)px solid color2;
+  border-right:  (r)px     solid color3;
+  border-left:   (l - r)px solid color4;
+  position relative
+  display: table;
+  margin: auto;
+  transition all .5s
+  .inner
+    position absolute
+    top -(r)px
+    left -(l - r)px
+    width (l)px
+    height (l)px
+    display flex
+    align-items: center;
+    justify-content: flex-end;
+    text-align right
+    font-family: 'Lato', sans-serif;
+    color color5
+    text-shadow: 2px 2px color1;
+    font-size: (l * 0.27)px;
+    font-weight: 300;
+    padding: 10px;
+.colors
+  background white
+  color white
+  margin-top 20px
+  display flex
+  overflow auto
+  .palette
+    margin 20px 0 20px 20px
+    padding 10px
+    min-width 100px
+    box-shadow: 0px 10px 40px -10px rgba(0,64,128, 0.3);
+    border-radius 5px
+    cursor pointer
+    transition .3s
+    &:hover
+      box-shadow: 0px 10px 10px -5px rgba(#263646, 0.5);
+      transform scale(1.05)
+    &.selected
+      box-shadow: 0px 10px 10px -5px rgba(#263646, 0.5);
+      transform scale(1.05)
+
+
+
+
+// color1 = #00204A
+// color2 = #00BBF0
+// color3 = #005792
+// color4 = #005792
+// color5 = #FDB44B
+
+// color1 = #424874
+// color2 = #FFCE66
+// color3 = #83D1A3
+// color4 = #AA2561
+// color5 = #C4CFFF

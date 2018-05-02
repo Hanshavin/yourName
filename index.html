@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+
+  <div id="app">
+
+    <div class="wrapper" v-bind:style="wrapper">
+      <div class="inner" v-bind:style="inner">
+        <p>
+          <!-- HANSH<br>
+          AVIN -->
+          PIER<br>
+          KUN<br>
+          DAYO
+          <!-- ROB<br>
+          KEITH -->
+        </p>
+      </div>
+    </div>
+
+    <div class="colors">
+      <div class="palette" v-for="palette in palettes" v-on:click="click(palette)">
+        <div class="color" v-bind:style="{ background: palette[0], height: '65px' }"></div>
+        <div class="color" v-bind:style="{ background: palette[1], height: '50px' }"></div>
+        <div class="color" v-bind:style="{ background: palette[2], height: '35px' }"></div>
+        <div class="color" v-bind:style="{ background: palette[3], height: '30px' }"></div>
+        <div class="color" v-bind:style="{ background: palette[4], height: '20px' }"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>
